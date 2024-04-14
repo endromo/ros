@@ -468,7 +468,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("ros/app")["default"].create({"name":"ros","version":"0.0.0+c078ac3e"});
+            require("ros/app")["default"].create({"name":"ros","version":"0.0.0+e1ae8565"});
           }
         
 //# sourceMappingURL=ros.map
