@@ -1,23 +1,56 @@
 # ros
-Restaurant Ordering System
 
-1. Frontend:
-    • Framework: Ember.js
-    • Create a simple and user-friendly interface that includes:
-        – A homepage with restaurant information.
-        – A menu page where users can browse available dishes.
-        – A customer portal where users can sign in (based on a unique
-        username), view their order history, and manage their details.
-        – An order page where users can select menu items, specify quantities, and submit their orders.
-2. Backend:
-    • Framework/API: IBM Loopback 3
-    • Engine: NodeJS v16
-    • Develop the API to handle CRUD operations for menu items, orders,
-    and customer accounts.
-3. Database:
-    • Database System: PostgreSQL
-    • Design the database schema to include the following models with
-    specified relationships:
-        – Menu Item: Represents dishes available for order.
-        – Order: Records details of customer orders.
-        – Customer: Information about registered customers.
+This README outlines the details of collaborating on this Ember application.
+A short introduction of this app could easily go here.
+
+## Prerequisites
+
+You will need the following things properly installed on your computer.
+
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with npm)
+* [Ember CLI](https://ember-cli.com/)
+* [Google Chrome](https://google.com/chrome/)
+
+## Installation
+
+* `git clone <repository-url>` this repository
+* `cd ros`
+* `npm install`
+
+## Running / Development
+
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+
+### Code Generators
+
+Make use of the many generators for code, try `ember help generate` for more details
+
+### Running Tests
+
+* `ember test`
+* `ember test --server`
+
+### Linting
+
+* `npm run lint`
+* `npm run lint:fix`
+
+### Building
+
+* `ember build` (development)
+* `ember build --environment production` (production)
+
+### Deploying
+
+Specify what it takes to deploy your app.
+
+## Further Reading / Useful Links
+
+* [ember.js](https://emberjs.com/)
+* [ember-cli](https://ember-cli.com/)
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
