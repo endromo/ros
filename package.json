@@ -2,10 +2,10 @@
   "name": "ros",
   "version": "1.0.0",
   "private": true,
-  "description": "Small description for ros goes here",
+  "description": "Restaurant Ordering System",
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "endro.mono9@gmail.com",
   "directories": {
     "doc": "doc",
     "test": "tests"
