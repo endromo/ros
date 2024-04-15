@@ -11,7 +11,7 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
 
-## Prerequisite Version
+## Current Versions
 * ember-cli: 3.28.6
 * node: 16.20.2
 
