@@ -8,7 +8,7 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
+* [EmberJS](https://guides.emberjs.com)
 * [LoopBack](http://loopback.io)
 * [PostgreSQL](https://www.postgresql.org)
 * [Google Chrome](https://google.com/chrome/)
