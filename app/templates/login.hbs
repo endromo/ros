@@ -3,4 +3,12 @@
 {{!-- Created At: 2024-04-12 --}}
 
 {{page-title "Login"}}
-{{outlet}}
+<br><br><br>
+<div style="text-align: center;">
+    <input type="text" placeholder="username" id="username" style="margin-bottom: 10px;" autofocus /><br>
+    <input type="password" placeholder="password" id="password" style="margin-bottom: 10px;" /><br>
+    <button>Login</button><br>
+    <br>No account? {{#link-to "signup"}}
+    Create one!
+    {{/link-to}}
+</div>
