@@ -28,11 +28,33 @@ You will need the following things properly installed on your computer.
 ## PostgreSQL Tables 
 
 * `CREATE TABLE public.customer (
-    id int GENERATED ALWAYS AS IDENTITY NOT NULL,
+    id int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
     username varchar NOT NULL,
-    "password" varchar NOT NULL
+    pwd varchar NOT NULL
   )`
- 
+
+* `CREATE TABLE public.item (
+  	id int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
+    item_name varchar NOT NULL,
+    price int4 DEFAULT 1 NOT NULL
+  )`
+
+* `CREATE TABLE public."order" (
+    id int GENERATED ALWAYS AS IDENTITY NOT NULL,
+    customer_id int NOT NULL,
+    order_date date NOT NULL,
+    total int NOT NULL
+  )`
+
+* `CREATE TABLE public.detail (
+    id int GENERATED ALWAYS AS IDENTITY NOT NULL,
+    order_id int NOT NULL,
+    item_id int NOT NULL,
+    qty int DEFAULT 1 NOT NULL,
+    price int DEFAULT 1 NOT NULL,
+    sub_total int DEFAULT 1 NOT NULL
+  )`
+  
 ## Running / Development Ember
 
 * `ember serve`
