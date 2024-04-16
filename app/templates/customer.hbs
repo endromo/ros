@@ -6,8 +6,42 @@
     <input type="password" placeholder="password" id="password" style="margin-bottom: 10px;" /><br>
     <button>Login</button><br>
     <br>No account? <a href="/signup">
-    Create one!
+        Create one!
     </a>
 </div>
 
 {{outlet}}
+
+
+<br>
+<br>
+
+{{#if this.model}}
+<div class="col-12 col-md-8 col-lg-4 mx-auto my-4">
+
+    <table align="center">
+        <tr>
+            <td>
+                <h2>Customer</h2>
+            </td>
+        </tr>
+
+        {{#each this.model as |item|}}
+        <tr>
+            <td>Username</td>
+            <td>:</td>
+            <td>{{item.username}}</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td>{{item.pwd}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+{{else}}
+
+<h2>.Empty.</h2>
+
+{{/if}}
