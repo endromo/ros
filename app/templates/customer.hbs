@@ -1,13 +1,54 @@
 {{page-title "Customer"}}
 
 <br><br><br>
+
+
+
 <div style="text-align: center;">
-    <input type="text" placeholder="username" id="username" style="margin-bottom: 10px;" autofocus /><br>
-    <input type="password" placeholder="password" id="password" style="margin-bottom: 10px;" /><br>
-    <button>Login</button><br>
-    <br>No account? <a href="/signup">
-        Create one!
-    </a>
+
+    <div class="row field">
+        <div class="col-sm" style="text-align: right;">
+            <label>UserName</label>
+        </div>
+        <div class="col-sm" style="text-align: left;">
+            {{input value=this.userName }}
+        </div>
+    </div>
+
+    <div class="row field">
+        <div class="col-sm" style="text-align: right;">
+            <label>Password</label>
+        </div>
+        <div class="col-sm" style="text-align: left;">
+            {{input value=this.password type="password"}}
+        </div>
+
+    </div>
+
+    <div class="row field">
+        <div class="col-sm" style="text-align: right;">
+
+        </div>
+        <div class="col-sm" style="text-align: left;">
+            <button {{on "click" this.customerOn}}>Login</button>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="row field">
+        <div class="col-sm" style="text-align: right;">
+
+        </div>
+        <div class="col-sm" style="text-align: left;">
+            No account? <a href="/signup">
+                Create one!
+            </a>
+        </div>
+
+    </div>
+
 </div>
 
 {{outlet}}
