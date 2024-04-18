@@ -1,0 +1,38 @@
+{{page-title "View"}}
+
+<br>
+<br>
+
+{{#if this.model}}
+<div class="col-12 col-md-8 col-lg-4 mx-auto my-4">
+
+    <table align="center">
+        <tr>
+            <td>
+                <h2>Customer One</h2>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Username</td>
+            <td>:</td>
+            <td>{{this.model.username}}</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td>{{this.model.pwd}}</td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+            </td>
+        </tr>
+
+    </table>
+</div>
+{{else}}
+
+<h2>.Empty.</h2>
+
+{{/if}}
