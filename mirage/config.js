@@ -68,7 +68,10 @@ function routes() {
   ];
 
   this.get('/customers', function (db, request) {
-    return { data: customers };
+    
+      return { data: customers };
+    
+    
   });
 
   this.get('/customers/:id', function (db, request) {

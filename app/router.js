@@ -16,5 +16,7 @@ Router.map(function () {
   this.route('signup');
   this.route('customer', function() {
     this.route('view', {path: '/view/:id'});
+    this.route('show', {path: '/show/:username'});
   });
+  this.route('item');
 });
