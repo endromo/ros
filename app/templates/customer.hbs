@@ -10,7 +10,7 @@
         </div>
         <div class="col-sm" style="text-align: left;">
             <input type="text" placeholder="username" id="username" name="username" style="margin-bottom: 10px;"
-                autofocus />
+                autofocus {{on "change" this.updateUsername}} />
 
         </div>
     </div>

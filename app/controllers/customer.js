@@ -1,14 +1,19 @@
-import Controller from '@ember/controller';
-import { action } from '@ember/object';
+import Controller from "@ember/controller";
+import { action } from "@ember/object";
+import { tracked } from "@glimmer/tracking";
 
 export default class CustomerController extends Controller {
-    username = 'ssdfsd';
-    password = '';
-    @action
-    customerOn() {
-        let userName = this.getProperties('username');
-        let password = this.getProperties('password');
-        console.log(userName);
-        alert(userName.toString());
-    }
+  @tracked username = "user1";
+  @tracked pwd = "";
+
+  @action
+  customerOn() {
+    console.log(this.username);
+    alert(this.username.toString());
+  }
+
+  @action
+  updateUsername(event) {
+    this.username = event.target.value;
+  }
 }
