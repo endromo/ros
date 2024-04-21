@@ -23,9 +23,13 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd ros`
+* `cd frontend`
+* `npm install`
+* `cd ..`
+* `cd backend`
 * `npm install`
 
-## PostgreSQL Tables 
+<!-- ## PostgreSQL Tables 
 
 * `CREATE TABLE public.customer (
     id int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
@@ -53,7 +57,7 @@ You will need the following things properly installed on your computer.
     qty int DEFAULT 1 NOT NULL,
     price int DEFAULT 1 NOT NULL,
     sub_total int DEFAULT 1 NOT NULL
-  )`
+  )` -->
   
 ## Running / Development Ember
 
@@ -63,7 +67,7 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development Loopback
 
-* `cd lb-ros`
+* `cd backend`
 * `node .`
 * Web server listening at [http://localhost:3000](http://localhost:3000).
 * Browse your REST API at [http://localhost:3000/explorer](http://localhost:3000/explorer).
