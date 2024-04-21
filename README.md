@@ -10,7 +10,7 @@ You will need the following things properly installed on your computer.
 - [Node.js](https://nodejs.org/) (with npm)
 - [Ember.js](https://guides.emberjs.com)
 - [LoopBack](http://loopback.io)
-- [PostgreSQL](https://www.postgresql.org)
+<!-- - [PostgreSQL](https://www.postgresql.org) -->
 - [Google Chrome](https://google.com/chrome/)
 
 ## Current Versions
@@ -18,7 +18,7 @@ You will need the following things properly installed on your computer.
 - ember-cli: 3.28.6
 - loopback: 3.22.0
 - node: 16.20.2
-- PostgreSQL 14.11
+<!-- - PostgreSQL 14.11 -->
 
 ## Installation
 
