@@ -1,13 +1,8 @@
 import Controller from "@ember/controller";
-import Route from '@ember/routing/route';
 import { action } from "@ember/object";
 import { tracked } from "@glimmer/tracking";
-// import service from '@ember/service';
-import { inject as service } from '@ember/service';
 
-
-export default class CustomerController extends Controller {
-  @service router;
+export default class Customer extends Controller.extend({}) {
   @tracked username = "";
   @tracked pwd = "";
 
@@ -15,11 +10,17 @@ export default class CustomerController extends Controller {
   customerOn() {
     console.log(this.username);
     alert(this.username.toString());
-    this.router.transitionTo("customer.show", this.username);
+    this.transitionToRoute("customer.show", this.username);
   }
 
   @action
-  updateUsername(event) {
+  updateUsername(event: any) {
     this.username = event.target.value;
+  }
+}
+
+declare module "@ember/controller" {
+  interface Registry {
+    customer: Customer;
   }
 }
