@@ -30,18 +30,15 @@ export default class CustomerShowRoute extends Route {
     let loopBackURL = "http://localhost:3000";
 
     let filterObj = { where: { username: username } };
-    console.log("strf");
-
     let strf = JSON.stringify(filterObj);
+    
+    console.log("strf");
     console.log(strf);
 
     let parsedDb = this.reqGet(
       loopBackURL + "/api/customers?filter=" + encodeURIComponent(strf)
     );
-    console.log("uri");
-    console.log(
-      loopBackURL + "/api/customers?filter=" + encodeURIComponent(strf)
-    );
+    
     console.log("parsedDb");
     console.log(parsedDb);
     return parsedDb;

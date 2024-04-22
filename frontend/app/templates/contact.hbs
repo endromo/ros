@@ -7,39 +7,13 @@
 <br>
 <br>
 
-{{#if this.model}}
-<div class="col-12 col-md-8 col-lg-4 mx-auto my-4">
-
-    <table align="center">
-        <tr>
-            <td>
-                <h2>Contact</h2>
-            </td>
-        </tr>
-
-        {{#each this.model as |item|}}
-        <tr>
-            <td>Name</td>
-            <td>:</td>
-            <td>{{item.name}}</td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td>:</td>
-            <td>{{item.email}}</td>
-        </tr>
-        {{/each}}
-    </table>
-</div>
-{{else}}
-
 <div class="row pt-4">
     <div class="col-12 col-md-8 col-lg-4 mx-auto my-4">
 
         <table align="center">
             <tr>
                 <td>
-                    <h2>.Contact.</h2>
+                    <h2>Contact</h2>
                 </td>
             </tr>
             <tr>
@@ -58,5 +32,3 @@
 </div>
 
 {{outlet}}
-
-{{/if}}
