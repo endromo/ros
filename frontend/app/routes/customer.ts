@@ -1,6 +1,4 @@
-import { isArray } from "@ember/array";
 import Route from "@ember/routing/route";
-import { isEmpty, isNone } from "@ember/utils";
 import config from "ros/config/environment";
 
 export default class CustomerRoute extends Route {
