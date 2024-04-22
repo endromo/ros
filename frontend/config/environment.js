@@ -19,7 +19,7 @@ module.exports = function (environment) {
         "Content-Type": "application/json",
       },
       redirect: "follow",
-      referrerPolicy: "no-referrer",
+      referrerPolicy: "no-referrer"
     },
     locationType: "auto",
     EmberENV: {

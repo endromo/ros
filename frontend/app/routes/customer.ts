@@ -18,24 +18,39 @@ export default class CustomerRoute extends Route {
 
       let customers = [
         {
-          id: "1",
           username: "user1",
           pwd: "1231",
-        },
-        {
-          id: "2",
-          username: "user2",
-          pwd: "1232",
         },
       ];
 
       console.log("reqGet customers");
       console.log(customers);
 
+      let tmpOpt = {
+        body: JSON.stringify(customers[0])
+      }
+      let postOpt = Object.assign(tmpOpt, config.fetchOpt);
+      postOpt.method = "POST";
+
+      console.log("reqGet postOpt");
+      console.log(postOpt);
+
+      this.reqPost(url, postOpt);
+
       return customers;
     } else {
       return parsed;
     }
+  }
+
+  async reqPost(url: string, postOpt:any) {
+    let response = await fetch(url, postOpt);
+
+    let parsed = await response.json();
+    console.log("reqPost parsed");
+    console.log(parsed);
+
+    return parsed;
   }
 
   async model() {
