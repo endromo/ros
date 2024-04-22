@@ -6,29 +6,25 @@
 {{#if this.model}}
 <div class="col-12 col-md-8 col-lg-4 mx-auto my-4">
 
+    <h2>Customer Fetch</h2>
     <table align="center">
-        <tr>
-            <td>
-                <h2>Customer One</h2>
-            </td>
-        </tr>
-
+        {{#each this.model as |item|}}            
         <tr>
             <td>Username</td>
             <td>:</td>
-            <td>{{this.model.data.attributes.username}}</td>
+            <td>{{item.username}}</td>
         </tr>
         <tr>
             <td>Password</td>
             <td>:</td>
-            <td>{{this.model.data.attributes.pwd}}</td>
+            <td>{{item.pwd}}</td>
         </tr>
         <tr>
             <td>
                 <hr>
             </td>
         </tr>
-
+        {{/each}}     
     </table>
 </div>
 {{else}}
