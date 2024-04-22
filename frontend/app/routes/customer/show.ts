@@ -1,18 +1,9 @@
 import Route from "@ember/routing/route";
+import config from "ros/config/environment";
 
 export default class CustomerShowRoute extends Route {
   async reqGet(url: string) {
-    let response = await fetch(url, {
-      method: "GET",
-      mode: "cors",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      redirect: "follow",
-      referrerPolicy: "no-referrer",
-    });
+    let response = await fetch(url, config.fetchOpt);
 
     let parsed = await response.json();
     console.log("reqGet parsed");
@@ -27,20 +18,16 @@ export default class CustomerShowRoute extends Route {
     console.log("username");
     console.log(username);
 
-    let loopBackURL = "http://localhost:3000";
-
     let filterObj = { where: { username: username } };
     let strf = JSON.stringify(filterObj);
     
-    console.log("strf");
-    console.log(strf);
-
     let parsedDb = this.reqGet(
-      loopBackURL + "/api/customers?filter=" + encodeURIComponent(strf)
+      config.loopBackURL + "/api/customers?filter=" + encodeURIComponent(strf)
     );
     
     console.log("parsedDb");
     console.log(parsedDb);
+
     return parsedDb;
   }
 }
