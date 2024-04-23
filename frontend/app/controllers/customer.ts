@@ -10,6 +10,9 @@ export default class Customer extends Controller.extend({}) {
 
   @action
   customerOn() {
+    alert("username: " + this.username);
+    alert("pwd: " + this.pwd);
+
     this.session
       .login(this.username, this.pwd)
       .then(() => {

@@ -5,24 +5,27 @@
 <div style="text-align: center;">
 
     <div class="row field">
+
         <div class="col-sm" style="text-align: right;">
-            <label>UserName</label>
+            User Name:
         </div>
         <div class="col-sm" style="text-align: left;">
-            <input type="text" placeholder="username" id="username" name="username" style="margin-bottom: 10px;"
-                autofocus {{on "change" this.updateUsername}} />
+            <label>
 
+                <Input @type="text" @value={{this.username}} />
+            </label>
         </div>
     </div>
-
     <div class="row field">
         <div class="col-sm" style="text-align: right;">
-            <label>Password</label>
+            Password:
         </div>
         <div class="col-sm" style="text-align: left;">
-            <input type="password" placeholder="password" id="password" style="margin-bottom: 10px;" />
-        </div>
+            <label>
 
+                <Input @type="password" @value={{this.pwd}} />
+            </label>
+        </div>
     </div>
 
     <div class="row field">
@@ -55,9 +58,9 @@
 <div class="col-12 col-md-8 col-lg-4 mx-auto my-4">
 
     <h2>Customer Account List</h2>
-    
+
     <table align="center">
-        
+
         {{#each this.model as |item|}}
         <tr>
             <td>Username</td>
