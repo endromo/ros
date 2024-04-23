@@ -9,12 +9,10 @@ export default class Session extends Service.extend({}) {
   login(userName: string, pwd: string){
     return new Promise((resolve, reject)=>{
       if(userName == 'user1' && pwd == '1231'){
-        this.cookies.write('user', userName);
-        alert("set coocies: " + userName);
+        this.cookies.write('user', userName);        
         resolve("ok");
       } else {
         reject('Username and password did not match');
-        alert("reject coocies");
       }
     })
   }
