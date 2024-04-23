@@ -1,8 +1,6 @@
 import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
-import type computed from "@ember/object/computed";
 import { action } from "@ember/object";
-import Ember from "ember";
 
 //  Created By: Endro
 //  Email: endro.mono9@gmail.com
@@ -31,7 +29,7 @@ export default class Navq extends Component<NavqArgs> {
   getLogOut() {
     if (confirm("Are you sure you want to logout?")) {
       alert("logout");
-      this.session.setLogout();      
+      this.session.setLogout();
       location.reload();
       return true;
     } else {
@@ -39,5 +37,4 @@ export default class Navq extends Component<NavqArgs> {
       return false;
     }
   }
-
 }
