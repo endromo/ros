@@ -3,7 +3,7 @@ import config from "ros/config/environment";
 
 export default class CustomerShowRoute extends Route {
   async reqGet(url: string) {
-    let response = await fetch(url, config.fetchOpt);
+    let response = await fetch(url);
 
     let parsed = await response.json();
     console.log("reqGet parsed");

@@ -10,7 +10,6 @@ declare const config: {
   rootURL: string;
   APP: Record<string, unknown>;
   loopBackURL: string;
-  fetchOpt:any;
 };
 
 export default config;

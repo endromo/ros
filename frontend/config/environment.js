@@ -9,18 +9,7 @@ module.exports = function (environment) {
     modulePrefix: "ros",
     environment,
     rootURL: "/",
-    loopBackURL: "http://localhost:3000",
-    fetchOpt: {
-      method: "GET",
-      mode: "cors",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      redirect: "follow",
-      referrerPolicy: "no-referrer"
-    },
+    loopBackURL: "http://localhost:3000",    
     locationType: "auto",
     EmberENV: {
       FEATURES: {

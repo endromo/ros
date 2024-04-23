@@ -7,7 +7,7 @@ import config from "ros/config/environment";
 
 export default class CustomerRoute extends Route {
   async reqGet(url: string) {
-    let response = await fetch(url, config.fetchOpt).catch((reason: any) => {
+    let response = await fetch(url).catch((reason: any) => {
       alert("error: Please check loopback3 connection");
     });
 
@@ -16,45 +16,17 @@ export default class CustomerRoute extends Route {
     console.log("reqGet parsed");
     console.log(parsed);
 
-    if (parsed.length == 0) {
-      console.log("reqGet parsed.length");
-      console.log(parsed.length);
+    let customers = [
+      {
+        username: "user1",
+        pwd: "1231",
+      },
+    ];
 
-      let customers = [
-        {
-          username: "user1",
-          pwd: "1231",
-        },
-      ];
+    console.log("reqGet customers");
+    console.log(customers);
 
-      console.log("reqGet customers");
-      console.log(customers);
-
-      let tmpOpt = {
-        body: JSON.stringify(customers[0]),
-      };
-      let postOpt = Object.assign(tmpOpt, config.fetchOpt);
-      postOpt.method = "POST";
-
-      console.log("reqGet postOpt");
-      console.log(postOpt);
-
-      this.reqPost(url, postOpt);
-
-      return customers;
-    } else {
-      return parsed;
-    }
-  }
-
-  async reqPost(url: string, postOpt: any) {
-    let response = await fetch(url, postOpt);
-
-    let parsed = await response.json();
-    console.log("reqPost parsed");
-    console.log(parsed);
-
-    return parsed;
+    return customers;
   }
 
   async model() {

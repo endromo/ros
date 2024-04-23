@@ -27,11 +27,6 @@ export default class Navq extends Component<NavqArgs> {
     return userName;
   }
 
-  get getInLoginPage(){
-    let appCtrl = Ember.getOwner(this).lookup('controller:application');  
-    return appCtrl?.currentRouteName != "customer.index";
-  }
-
   @action
   getLogOut() {
     if (confirm("Are you sure you want to logout?")) {
