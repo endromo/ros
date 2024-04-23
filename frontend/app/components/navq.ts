@@ -4,6 +4,10 @@ import type computed from "@ember/object/computed";
 import { action } from "@ember/object";
 import Ember from "ember";
 
+//  Created By: Endro
+//  Email: endro.mono9@gmail.com
+//  Created At: 2024-04-12
+
 interface NavqArgs {}
 
 export default class Navq extends Component<NavqArgs> {

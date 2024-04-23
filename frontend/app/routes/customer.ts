@@ -1,6 +1,10 @@
 import Route from "@ember/routing/route";
 import config from "ros/config/environment";
 
+//  Created By: Endro
+//  Email: endro.mono9@gmail.com
+//  Created At: 2024-04-12
+
 export default class CustomerRoute extends Route {
   async reqGet(url: string) {
     let response = await fetch(url, config.fetchOpt).catch((reason: any) => {

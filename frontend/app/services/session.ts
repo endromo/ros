@@ -1,6 +1,10 @@
 import Service from "@ember/service";
 import { inject as service } from '@ember/service';
 
+//  Created By: Endro
+//  Email: endro.mono9@gmail.com
+//  Created At: 2024-04-12
+
 export default class Session extends Service.extend({}) {
   currentUser: any;
   isLoggedIn: boolean = false;
