@@ -3,9 +3,11 @@ import config from "ros/config/environment";
 
 export default class CustomerRoute extends Route {
   async reqGet(url: string) {
-    let response = await fetch(url, config.fetchOpt);
+    let response = await fetch(url, config.fetchOpt).catch((reason: any) => {
+      alert("error: Please check loopback3 connection");
+    });
 
-    let parsed = await response.json();
+    let parsed = await response?.json();
 
     console.log("reqGet parsed");
     console.log(parsed);
@@ -25,8 +27,8 @@ export default class CustomerRoute extends Route {
       console.log(customers);
 
       let tmpOpt = {
-        body: JSON.stringify(customers[0])
-      }
+        body: JSON.stringify(customers[0]),
+      };
       let postOpt = Object.assign(tmpOpt, config.fetchOpt);
       postOpt.method = "POST";
 
@@ -41,7 +43,7 @@ export default class CustomerRoute extends Route {
     }
   }
 
-  async reqPost(url: string, postOpt:any) {
+  async reqPost(url: string, postOpt: any) {
     let response = await fetch(url, postOpt);
 
     let parsed = await response.json();
