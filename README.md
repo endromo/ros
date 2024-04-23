@@ -15,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 ## Current Versions
 
-- ember-cli: 3.28.6
+- ember-cli: 3.22.0
 - loopback: 3.22.0
 - node: 16.20.2
 <!-- - PostgreSQL 14.11 -->
