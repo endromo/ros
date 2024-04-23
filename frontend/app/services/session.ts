@@ -25,5 +25,20 @@ export default class Session extends Service.extend({}) {
     console.log(isExists);
     return isExists;
   }
+
+  userName(){
+    let userName = this.cookies.read("user");
+    console.log("userName");
+    console.log(userName);
+
+    return userName;
+  }
+
+  setLogout(){
+    this.cookies.clear('user');
+    console.log("Session setLogout");
+    location.reload();
+    return true;
+  }
 }
 

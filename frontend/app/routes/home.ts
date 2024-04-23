@@ -1,8 +1,26 @@
-//  Created By: Endro 
-//  Email: endro.mono9@gmail.com 
-//  Created At: 2024-04-12 
+import Route from "@ember/routing/route";
+import { inject as service } from "@ember/service";
 
-import Route from '@ember/routing/route';
+//  Created By: Endro
+//  Email: endro.mono9@gmail.com
+//  Created At: 2024-04-12
 
 export default class HomeRoute extends Route {
+  @service session: any;
+
+  model() {
+    let isLogin = this.session.isLogin();
+    console.log("isLogin");
+    console.log(isLogin);
+    let userName = this.session.userName();
+    console.log("userName");
+    console.log(userName);
+
+    let result = {
+      isLogin: isLogin,
+      userName: userName,
+    };
+
+    return result;
+  }
 }

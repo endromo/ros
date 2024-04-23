@@ -1,0 +1,32 @@
+<nav class="topnav navbar navbar-expand-lg fixed-top bg-white headroom headroom--not-bottom shadow headroom--pinned"
+    id="navbar">
+    <div class="container">
+        <a class="navbar-brand text-primary" href="/">
+            <img src="/img/logo.jpg" height="45" class="mr-2">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-primary"></i>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto d-flex align-items-center"></ul>
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                {{#if this.getInLoginPage}}
+                <li class="nav-item">
+                    <span class="nav-link">
+                        {{#if this.getIsLogin}}
+                        <a href="#" {{on "click" this.getLogOut}}>{{this.getUserName}}</a>
+                        {{else}}
+                        <a class="btn btn-primary" href="/customer?purpose=endro_join">Login</a>
+                        {{/if}}</span>
+                </li>
+                {{/if}}
+
+            </ul>
+        </div>
+    </div>
+</nav>
