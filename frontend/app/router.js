@@ -15,5 +15,5 @@ Router.map(function () {
     this.route('show', {path: '/show/:username'});
   });
   this.route('contact');
-  this.route('home', {path:'/'});
+  // this.route('home', {path:'/'});
 });

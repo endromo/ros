@@ -19,7 +19,7 @@ export default class Customer extends Controller.extend({}) {
     this.session
       .login(this.username, this.pwd)
       .then(() => {
-        this.transitionToRoute("home");
+        this.transitionToRoute("index");
         alert("ok login");
       })
       .catch((reason: any) => {
