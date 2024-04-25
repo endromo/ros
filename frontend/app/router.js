@@ -16,4 +16,5 @@ Router.map(function () {
   });
   this.route('contact');
   // this.route('home', {path:'/'});
+  this.route('cart');
 });
