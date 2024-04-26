@@ -4,7 +4,7 @@ import { inject as service } from "@ember/service";
 //  Created By: Endro
 //  Email: endro.mono9@gmail.com
 
-export default class Index extends Route.extend({}) {
+export default class Menu extends Route.extend({}) {
   @service session: any;
 
   model() {

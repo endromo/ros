@@ -17,4 +17,5 @@ Router.map(function () {
   this.route('contact');
   this.route('cart');
   this.route('item', {path: '/item/:id'});
+  this.route('menu');
 });
