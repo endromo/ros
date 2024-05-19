@@ -110,4 +110,4 @@ Specify what it takes to deploy your app.
 ### Developer
 
 - Created By: Endro
-- Email: endro.mono9 @ gmail . com
+- Email: endro.mono9@ gmail . com
